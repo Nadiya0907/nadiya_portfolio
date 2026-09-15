@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Nadz — Python Automation & AI/ML Developer. I build reliable Python automation, data processing and machine learning solutions for businesses.">
+<meta name="theme-color" content="#0b0f17">
+<title>Nadz · Python Automation & AI/ML Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg-primary:#0b0f17;--bg-card:rgba(20,28,40,.7);--bg-glass:rgba(25,35,50,.5);--border-light:rgba(255,255,255,.06);--text-primary:#fff;--text-secondary:#b0c4de;--text-muted:#8a9bb5;--accent-green:#1de9b6;--accent-blue:#3b82f6;--accent-gradient:linear-gradient(135deg,#1de9b6,#3b82f6);--shadow-glow:0 0 20px rgba(29,233,182,.2);--radius-md:16px;--radius-lg:24px;--transition:.2s ease}
+html{scroll-behavior:smooth;scrollbar-gutter:stable}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 24px;overflow-x:hidden;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 30% 10%,rgba(29,233,182,.04),transparent 50%),radial-gradient(circle at 80% 70%,rgba(59,130,246,.04),transparent 60%);pointer-events:none;z-index:-1}
+.container{max-width:1200px;margin:0 auto;width:100%}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--accent-green);color:#0b0f17;padding:12px 24px;border-radius:0 0 12px 12px;font-weight:600;z-index:10000;transition:top .2s;text-decoration:none}
+.skip-link:focus{top:0;outline:none}
+:focus-visible{outline:2px solid var(--accent-green);outline-offset:3px;border-radius:4px}
+:focus:not(:focus-visible){outline:none}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em;line-height:1.2;color:var(--text-primary)}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+h3{font-size:1.4rem}
+.section-title{margin-bottom:48px;position:relative}
+.section-title::after{content:'';display:block;width:60px;height:3px;background:var(--accent-gradient);margin-top:16px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;border-radius:40px;font-weight:500;font-size:1rem;text-decoration:none;transition:all var(--transition);border:1px solid transparent;cursor:pointer;font-family:inherit;line-height:1.4}
+.btn-primary{background:var(--accent-gradient);color:#0b0f17;font-weight:600;box-shadow:0 4px 15px rgba(29,233,182,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(29,233,182,.4)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--text-primary)}
+.btn-outline:hover{border-color:var(--accent-green);background:rgba(29,233,182,.05);transform:translateY(-2px)}
+.btn-github{background:#24292e;color:#fff;border:1px solid rgba(255,255,255,.1)}
+.btn-github:hover{background:#2f363d;transform:translateY(-2px);border-color:rgba(255,255,255,.2)}
+.btn:disabled{opacity:.6;cursor:not-allowed;transform:none!important}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(11,15,23,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05);padding:16px 24px;margin:0 -24px}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:700;font-size:1.5rem;letter-spacing:-.03em;background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:.95rem;transition:color var(--transition);padding:4px 0}
+.nav-links a:hover{color:var(--accent-green)}
+.nav-cta{background:rgba(29,233,182,.1);padding:8px 20px;border-radius:30px;color:var(--accent-green)!important;border:1px solid rgba(29,233,182,.2)}
+.nav-cta:hover{background:rgba(29,233,182,.18)}
+.nav-icon{color:var(--text-secondary);font-size:1.1rem;transition:color var(--transition)}
+.nav-icon:hover{color:var(--accent-green)}
+.menu-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.1);color:#fff;font-size:1.3rem;cursor:pointer;padding:8px 12px;border-radius:8px;line-height:1}
+section{padding:100px 0}
+.hero{padding:60px 0 80px;display:flex;align-items:center;min-height:70vh}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero-content{max-width:640px}
+.hero-tag{display:inline-block;background:rgba(29,233,182,.08);border:1px solid rgba(29,233,182,.2);padding:6px 16px;border-radius:40px;font-size:.85rem;font-weight:500;color:var(--accent-green);margin-bottom:24px}
+.hero h1{margin-bottom:20px}
+.hero h1 span{background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.2rem;color:var(--text-secondary);margin-bottom:36px;max-width:540px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.code-window{background:#0d111c;border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-md);box-shadow:0 8px 20px -8px rgba(0,0,0,.6),0 0 0 1px rgba(29,233,182,.1);overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:.85rem}
+.code-header{display:flex;align-items:center;padding:14px 18px;background:rgba(255,255,255,.02);border-bottom:1px solid rgba(255,255,255,.05)}
+.code-dots{display:flex;gap:8px}
+.code-dots span{width:10px;height:10px;border-radius:50%;background:#2a3440}
+.code-dots span:first-child{background:#ff5f56}.code-dots span:nth-child(2){background:#ffbd2e}.code-dots span:last-child{background:#27c93f}
+.code-title{margin-left:16px;color:var(--text-muted);font-size:.8rem}
+.code-body{padding:20px 18px;color:#abb2bf;line-height:1.7}
+.code-body .keyword{color:#c678dd}.code-body .function{color:#61afef}.code-body .string{color:#98c379}.code-body .comment{color:#5c6370;font-style:italic}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.service-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:28px 24px;transition:all .25s}
+.service-card:hover{border-color:rgba(29,233,182,.3);transform:translateY(-4px);box-shadow:var(--shadow-glow)}
+.service-icon{font-size:2rem;margin-bottom:20px;color:var(--accent-green)}
+.service-card h3{margin-bottom:16px;font-size:1.3rem}
+.service-card ul{list-style:none;color:var(--text-secondary);font-size:.95rem}
+.service-card li{margin-bottom:8px;display:flex;align-items:baseline;gap:8px}
+.service-card li::before{content:"▹";color:var(--accent-green);font-size:.9rem;flex-shrink:0}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.project-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;transition:all .25s}
+.project-card:hover{border-color:rgba(59,130,246,.4);transform:translateY(-4px);box-shadow:0 20px 30px -15px rgba(0,0,0,.8)}
+.project-badge{display:inline-block;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-green);background:rgba(29,233,182,.08);padding:4px 12px;border-radius:30px;margin-bottom:20px;align-self:flex-start}
+.project-card h3{margin-bottom:12px;font-size:1.4rem}
+.project-card p{color:var(--text-secondary);font-size:.95rem;margin-bottom:20px}
+.tech-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tech-tag{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:4px 12px;border-radius:30px;font-size:.75rem;font-family:'JetBrains Mono',monospace;color:var(--text-secondary)}
+.project-metrics{background:rgba(0,0,0,.3);border-radius:12px;padding:16px;margin-bottom:24px;display:flex;gap:24px}
+.metric-item{display:flex;flex-direction:column}
+.metric-value{font-size:1.3rem;font-weight:700;color:var(--accent-green);font-family:'JetBrains Mono',monospace}
+.metric-label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase}
+.project-footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.project-link{color:var(--accent-green);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;padding:8px 4px}
+.project-link:hover{gap:10px}
+.skills-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.skill-chip{background:var(--bg-glass);border:1px solid var(--border-light);padding:12px 28px;border-radius:40px;font-family:'JetBrains Mono',monospace;font-size:.95rem;color:var(--text-secondary);transition:all .2s}
+.skill-chip:hover{border-color:var(--accent-green);color:var(--accent-green)}
+.repos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.repo-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:22px;transition:all .25s;text-decoration:none;display:flex;flex-direction:column;color:inherit}
+.repo-card:hover{border-color:rgba(29,233,182,.4);transform:translateY(-4px);box-shadow:var(--shadow-glow)}
+.repo-card h4{font-size:1.1rem;margin-bottom:10px;color:var(--accent-green)}
+.repo-card p{color:var(--text-secondary);font-size:.88rem;margin-bottom:16px;flex:1}
+.repo-meta{display:flex;gap:16px;font-size:.8rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;flex-wrap:wrap}
+.repo-lang-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent-blue);margin-right:6px;vertical-align:middle}
+.loading,.error-state{text-align:center;color:var(--text-muted);padding:32px;font-family:'JetBrains Mono',monospace}
+.spinner{display:inline-block;width:20px;height:20px;border:2px solid rgba(29,233,182,.2);border-top-color:var(--accent-green);border-radius:50%;animation:spin .8s linear infinite;margin-right:8px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-text p{color:var(--text-secondary);font-size:1.05rem;margin-bottom:20px}
+.about-highlight{color:var(--accent-green);font-weight:500}
+.about-stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap}
+.stat-item{display:flex;flex-direction:column}
+.stat-number{font-size:1.8rem;font-weight:700;background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{font-size:.85rem;color:var(--text-muted)}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+.step{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:28px 20px;text-align:center;transition:all .25s}
+.step:hover{border-color:var(--accent-blue);transform:translateY(-4px)}
+.step-number{font-size:2rem;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent-green);margin-bottom:16px;opacity:.8}
+.step h4{font-size:1.2rem;margin-bottom:8px}
+.step p{color:var(--text-muted);font-size:.9rem}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.benefit-card{background:rgba(29,233,182,.02);border:1px solid rgba(29,233,182,.1);border-radius:var(--radius-md);padding:28px 24px;transition:all .25s}
+.benefit-card:hover{border-color:var(--accent-green);background:rgba(29,233,182,.04)}
+.benefit-icon{color:var(--accent-green);font-size:1.6rem;margin-bottom:20px}
+.benefit-card h4{margin-bottom:10px;font-size:1.15rem}
+.benefit-card p{color:var(--text-secondary);font-size:.9rem}
+.cta-section{background:linear-gradient(145deg,rgba(29,233,182,.05),rgba(59,130,246,.05));border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:64px 48px;text-align:center;margin:40px 0 80px}
+.cta-section h2{margin-bottom:16px}
+.cta-section p{color:var(--text-secondary);font-size:1.1rem;max-width:560px;margin:0 auto 32px}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.contact-form{max-width:560px;margin:32px auto 0;display:flex;flex-direction:column;gap:14px;text-align:left}
+.form-row input,.form-row textarea{width:100%;padding:14px 18px;border-radius:12px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);color:var(--text-primary);font-family:inherit;font-size:1rem;transition:border .2s}
+.form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--accent-green);box-shadow:0 0 0 3px rgba(29,233,182,.15)}
+.form-row textarea{resize:vertical;min-height:120px}
+.form-status{margin-top:12px;font-size:.9rem;min-height:1.2em;text-align:center}
+.form-status.success{color:var(--accent-green)}
+.form-status.error{color:#ff6b6b}
+footer{border-top:1px solid rgba(255,255,255,.05);padding:40px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:var(--text-muted);font-size:.9rem}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:var(--text-muted);text-decoration:none;transition:color .2s;padding:4px 0}
+.footer-links a:hover{color:var(--accent-green)}
+@media (max-width:900px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:40px}.hero-content{max-width:100%}.nav-links{display:none}.menu-toggle{display:block}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:rgba(11,15,23,.98);backdrop-filter:blur(20px);padding:24px;gap:20px;border-bottom:1px solid rgba(255,255,255,.05)}}
+@media (max-width:600px){body{padding:0 16px}section{padding:64px 0}.hero{padding:40px 0 56px}.hero-buttons .btn,.cta-buttons .btn{width:100%}.cta-section{padding:40px 20px}.project-metrics{flex-direction:column;gap:12px}footer{flex-direction:column;text-align:center}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="#home" class="logo">Nadz</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#github">GitHub</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/Nadiya0907" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-tag">Python Automation &amp; AI/ML Developer</span>
+        <h1>Turn Repetitive Work Into <span>Reliable Python Automation</span></h1>
+        <p>I build practical Python automation, data-processing and machine-learning solutions that help businesses reduce manual work and solve real-world problems.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Hire Me</a>
+          <a href="https://github.com/Nadiya0907" target="_blank" rel="noopener noreferrer" class="btn btn-github"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="code-window" role="img" aria-label="Decorative code editor">
+        <div class="code-header"><div class="code-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="code-title">automation.py</span></div>
+        <div class="code-body"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd<br><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier<br><br><span class="comment"># clean &amp; transform data</span><br>df = pd.read_csv(<span class="string">'transactions.csv'</span>)<br>df = df.dropna().drop_duplicates()<br><br><span class="comment"># train model</span><br>model = RandomForestClassifier()<br>model.fit(X_train, y_train)<br><span class="function">print</span>(<span class="string">"Ready 🚀"</span>)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="services-grid">
+        <article class="service-card"><div class="service-icon" aria-hidden="true"><i class="fas fa-robot"></i></div><h3>Python Automation</h3><ul><li>Custom Python scripts</li><li>Excel/CSV automation</li><li>File and folder automation</li><li>Repetitive task automation</li></ul></article>
+        <article class="service-card"><div class="service-icon" aria-hidden="true"><i class="fas fa-database"></i></div><h3>Data Processing</h3><ul><li>Pandas</li><li>Data cleaning</li><li>CSV and Excel processing</li><li>Data transformation &amp; analysis</li></ul></article>
+        <article class="service-card"><div class="service-icon" aria-hidden="true"><i class="fas fa-brain"></i></div><h3>AI &amp; Machine Learning</h3><ul><li>Machine learning models</li><li>Classification &amp; prediction</li><li>Data preprocessing</li><li>Model evaluation</li></ul></article>
+        <article class="service-card"><div class="service-icon" aria-hidden="true"><i class="fas fa-code"></i></div><h3>Backend Development</h3><ul><li>Java &amp; Spring Boot</li><li>REST APIs</li><li>MySQL</li><li>Spring Data JPA</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid" id="projectsGrid"><div class="loading"><span class="spinner"></span> Loading projects…</div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Technologies</h2>
+      <div class="skills-grid">
+        <span class="skill-chip">Python</span><span class="skill-chip">Pandas</span><span class="skill-chip">NumPy</span><span class="skill-chip">Scikit-learn</span><span class="skill-chip">Matplotlib</span><span class="skill-chip">Java</span><span class="skill-chip">Spring Boot</span><span class="skill-chip">REST API</span><span class="skill-chip">MySQL</span><span class="skill-chip">Git</span><span class="skill-chip">GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="github">
+    <div class="container">
+      <h2 class="section-title">GitHub Activity</h2>
+      <div id="githubRepos" class="repos-grid" aria-live="polite"><div class="loading"><span class="spinner"></span> Loading GitHub repos…</div></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm <span class="about-highlight">Nadz</span>, a Python Automation &amp; AI/ML developer focused on building practical tools that solve real business problems.</p>
